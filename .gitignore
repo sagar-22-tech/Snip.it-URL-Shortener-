@@ -1,0 +1,12 @@
+# ENV
+.env
+
+# Node
+url-frontend/node_modules/
+url-frontend/dist/
+
+# Go
+bin/
+
+# OS
+.DS_Store
