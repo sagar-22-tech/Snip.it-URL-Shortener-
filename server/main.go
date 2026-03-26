@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 	"url_shortener/config"
 	"url_shortener/routes"
@@ -16,10 +15,7 @@ type User struct {
 
 func main() {
 	//Load env file
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
+	_ = godotenv.Load()
 	//DB connection
 	config.ConnectDB()
 
@@ -46,7 +42,7 @@ func main() {
 		app.ServeHTTP(w, r)
 	})
 	//Server Listen
-	err = http.ListenAndServe(":3000", handler)
+	err := http.ListenAndServe(":3000", handler)
 	if err != nil {
 		fmt.Printf("Server failed:%s\n", err)
 	}
