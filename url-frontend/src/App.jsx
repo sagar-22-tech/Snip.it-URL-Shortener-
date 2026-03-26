@@ -82,7 +82,7 @@ export default function App() {
     }
     setError(""); setResult(null); setLoading(true);
     try {
-      const res = await fetch("http://localhost:3000/user", {
+      const res = await fetch("https://snip-it-url-shortener.onrender.com/user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: url.trim() }),
