@@ -82,7 +82,8 @@ export default function App() {
     }
     setError(""); setResult(null); setLoading(true);
     try {
-      const res = await fetch("https://snip-it-url-shortener.onrender.com/user", {
+      const API_URL = import.meta.env.VITE_API_URL;
+      const res = await fetch(`${API_URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: url.trim() }),
