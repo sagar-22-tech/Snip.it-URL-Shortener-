@@ -1,6 +1,6 @@
 module url_shortener
 
-go 1.26.1
+go 1.26
 
 require (
 	github.com/jackc/pgpassfile v1.0.0 // indirect
