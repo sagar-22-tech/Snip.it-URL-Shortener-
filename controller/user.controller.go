@@ -31,7 +31,7 @@ func UserURL(w http.ResponseWriter, r *http.Request) {
 
 	response := map[string]interface{}{
 		"id":        id,
-		"short_url": "https://snip-it-url-shortener.onrender.com/" + shortCode,
+		"short_url": "https://go.snipurl.xyz/" + shortCode,
 		"original":  url.Link,
 	}
 
